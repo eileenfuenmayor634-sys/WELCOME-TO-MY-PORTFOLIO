@@ -1,3 +1,6 @@
+import mkDigitalImg from '../../imports/mk-digital.png';
+import ecommerceImg from '../../imports/ecommerce.png';
+
 export interface Project {
   title: string;
   description: string;
@@ -11,14 +14,16 @@ export const projects: Project[] = [
     title: 'Digital Marketing',
     'description': 'Plataforma de marketing digital con analytics y gestión de campañas',
     tech: ['React', 'Vercel', 'Tailwind'],
-    image: '/src/imports/mk-digital.png',
+    image: mkDigitalImg,
+
     url: 'https://digital-marketing-flame-phi.vercel.app/'
   },
   {
     title: 'E-commerce Platform',
     description: 'A modern e-commerce platform with advanced filtering and checkout',
     tech: ['React', 'TypeScript', 'Tailwind'],
-    image: '/src/imports/ecommerce.png',
+    image: ecommerceImg,
+
     url: 'https://ecommerce-topaz-omega.vercel.app/'
   },
   {

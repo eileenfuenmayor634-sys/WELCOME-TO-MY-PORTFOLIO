@@ -1,8 +1,8 @@
 import { ImageWithFallback } from '../figma/ImageWithFallback';
-
-
+import profileImg from '../../../imports/Gemini_Generated_Image_gp9uh4gp9uh4gp9u (1).png';
 
 export function HeroSection() {
+
   return (
 <section id="home" className="px-4 sm:px-6 pt-6 md:pt-8 pb-0">
       <div className="max-w-7xl mx-auto">
