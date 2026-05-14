@@ -1,0 +1,454 @@
+/**
+ * =============================================================
+ * FORMULARIO DE CONTACTO - RÉPLICA EXACTA (Versión 2)
+ * =============================================================
+ * 
+ * Autor: Eileen
+ * Descripción: Diseño idéntico a la imagen de referencia
+ * Iconos: SVG en línea (sin dependencias externas)
+ * 
+ * ÍNDICE:
+ * 
+ * 1. VARIABLES CSS (Colores, gradientes, sombras)
+ * 2. RESET Y BASE
+ * 3. LAYOUT PRINCIPAL
+ * 4. PANEL IZQUIERDO (INFO) - Gradiente dorado orgánico
+ * 5. PANEL DERECHO (FORMULARIO) - Campos modernos
+ * 6. ESTADO FOCO CON BORDE ARCOÍRIS (EFECTO CRÍTICO)
+ * 7. BOTÓN FINAL
+ * 8. RESPONSIVE
+ */
+
+/* =============================================================
+   1. VARIABLES CSS
+   ============================================================= */
+:root {
+  /* Colores principales */
+  --color-gold: #FFD93D;
+  --color-gold-light: #FFE666;
+  --color-gold-dark: #E6C235;
+  --color-gold-warm: #D4A843;
+  
+  /* Colores oscuros */
+  --color-dark: #1C1C1C;
+  --color-dark-blue: #1a1a2e;
+  --color-medium: #3C3C3C;
+  
+  /* Colores claros */
+  --color-gray-light: #F5F5F5;
+  --color-gray-border: #E0E0E0;
+  --color-gray-placeholder: #9CA3AF;
+  
+  /* Colores del formulario */
+  --color-input-bg: #FAFAFA;
+  --color-input-border: #D1D5DB;
+  
+  /* Arcoíris para borde focus */
+  --rainbow-gradient: linear-gradient(
+    135deg,
+    #FF6B6B,  /* Rojo */
+    #FF8E53,  /* Naranja */
+    #FFD93D,  /* Amarillo */
+    #4ECDC4,  /* Verde azulado */
+    #45B7D1,  /* Azul */
+    #96E6A1   /* Verde */
+  );
+  
+  /* Sombras */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 20px rgba(255, 217, 61, 0.3);
+  
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* =============================================================
+   2. RESET Y BASE
+   ============================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  line-height: 1.5;
+  color: var(--color-dark);
+  background-color: #F5F1E8;
+}
+
+/* =============================================================
+   3. LAYOUT PRINCIPAL
+   ============================================================= */
+.contact-wrapper {
+  min-height: 100vh;
+  padding: 40px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 24px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+/* =============================================================
+   4. PANEL IZQUIERDO (INFO) - Gradiente Dorado Orgánico
+   ============================================================= */
+.contact-info-panel {
+  /* Gradiente líquido dorado cálido */
+  background: linear-gradient(
+    145deg,
+    var(--color-gold) 0%,
+    var(--color-gold-light) 30%,
+    var(--color-gold) 60%,
+    var(--color-gold-warm) 100%
+  );
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Puntos de luz / Sparkles decorativos */
+.contact-info-panel::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.6) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(15px);
+}
+
+.contact-info-panel::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+/* Título principal */
+.info-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+  line-height: 1.15;
+}
+
+/* Subtítulo */
+.info-subtitle {
+  font-size: 1rem;
+  color: var(--color-medium);
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Datos de contacto */
+.contact-details {
+  position: relative;
+  z-index: 1;
+}
+
+/* Item de contacto */
+.contact-item {
+  margin-bottom: 24px;
+}
+
+.contact-item-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+/* Valor con icono */
+.contact-item-value {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+/* Iconos SVG - Línea moderna */
+.icon-svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--color-dark);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Bandera de Australia */
+.flag-icon {
+  width: 22px;
+  height: 14px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+/* =============================================================
+   5. PANEL DERECHO (FORMULARIO)
+   ============================================================= */
+.contact-form-panel {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+}
+
+/* Grupos del formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Etiqueta del campo */
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-medium);
+  margin-bottom: 8px;
+}
+
+/* Wrapper del input con icono */
+.input-wrapper {
+  position: relative;
+}
+
+/* Input base */
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--color-dark);
+  background: var(--color-input-bg);
+  border: 2px solid var(--color-input-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: 
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+/* Input con icono a la izquierda */
+.form-input.with-icon {
+  padding-left: 48px;
+}
+
+/* Placeholder */
+.form-input::placeholder {
+  color: var(--color-gray-placeholder);
+}
+
+/* Hover del input */
+.form-input:hover {
+  border-color: var(--color-gray-border);
+}
+
+/* Icono dentro del input (a la izquierda) */
+.input-icon-left {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--color-gray-placeholder);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* =============================================================
+   6. ESTADO FOCO CON BORDE ARCOÍRIS (EFECTO CRÍTICO)
+   ============================================================= */
+
+/* Wrapper con gradiente para efecto arcoíris - Compatibilidad mejorada */
+.input-wrapper-focus {
+  position: relative;
+  border-radius: var(--radius-md);
+  background: var(--rainbow-gradient);
+  padding: 2px;
+  transition: var(--transition-normal);
+}
+
+/* Input dentro del wrapper arcoíris - quitar borde default */
+.input-wrapper-focus .form-input {
+  display: block;
+  border: none;
+  border-radius: calc(var(--radius-md) - 2px);
+  background: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* EFECTO FOCO: Usando :focus-within en el wrapper (mejor compatibilidad) */
+.input-wrapper-focus:focus-within {
+  box-shadow: 
+    0 0 0 4px rgba(255, 107, 107, 0.2),
+    0 0 0 8px rgba(255, 217, 61, 0.15),
+    0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: rainbow-glow 2s ease-in-out infinite alternate;
+}
+
+/* Input recibe foco - cambio de borde interno */
+.input-wrapper-focus .form-input:focus {
+  outline: none;
+}
+
+/* Animación sutil del brillo arcoíris */
+@keyframes rainbow-glow {
+  0% {
+    box-shadow: 
+      0 0 0 4px rgba(255, 107, 107, 0.2),
+      0 0 0 8px rgba(255, 217, 61, 0.15);
+  }
+  33% {
+    box-shadow: 
+      0 0 0 4px rgba(255, 142, 83, 0.2),
+      0 0 0 8px rgba(78, 205, 196, 0.15);
+  }
+  66% {
+    box-shadow: 
+      0 0 0 4px rgba(69, 183, 209, 0.2),
+      0 0 0 8px rgba(150, 230, 161, 0.15);
+  }
+  100% {
+    box-shadow: 
+      0 0 0 4px rgba(255, 107, 107, 0.2),
+      0 0 0 8px rgba(255, 217, 61, 0.15);
+  }
+}
+
+/* Textarea styling */
+textarea.form-input {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* =============================================================
+   7. BOTÓN FINAL
+   ============================================================= */
+.submit-btn {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: white;
+  background: var(--color-dark-blue);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background: #252540;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 26, 46, 0.25);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* =============================================================
+   8. RESPONSIVE
+   ============================================================= */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  
+  .contact-info-panel {
+    padding: 36px;
+  }
+  
+  .contact-form-panel {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-wrapper {
+    padding: 20px 16px;
+  }
+  
+  .contact-info-panel {
+    padding: 28px;
+  }
+  
+  .contact-form-panel {
+    padding: 24px;
+  }
+  
+  .info-title {
+    font-size: 1.75rem;
+  }
+  
+  .form-input {
+    padding: 12px 14px;
+  }
+  
+  .form-input.with-icon {
+    padding-left: 44px;
+  }
+  
+  .input-icon-left {
+    left: 14px;
+    width: 18px;
+    height: 18px;
+  }
+}
