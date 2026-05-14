@@ -1,5 +1,7 @@
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
+
+
 export function HeroSection() {
   return (
 <section id="home" className="px-4 sm:px-6 pt-6 md:pt-8 pb-0">
@@ -55,7 +57,7 @@ export function HeroSection() {
                 {/* Profile image with circular frame */}
                 <div className="relative w-[300px] h-[300px] bg-black rounded-full overflow-hidden border-8 border-white shadow-2xl">
                   <ImageWithFallback
-                    src="/src/imports/Gemini_Generated_Image_gp9uh4gp9uh4gp9u (1).png"
+                    src={profileImg}
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />

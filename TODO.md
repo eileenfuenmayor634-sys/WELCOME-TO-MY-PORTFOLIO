@@ -1,8 +1,6 @@
-# TODO - Fix “Send Message” not showing notification
+# TODO (Hero profile image)
 
-- [x] Update `src/app/components/sections/ContactSection.tsx` to show a success notification after clicking Send.
-- [x] Use notification mechanism: inline UI message (“Enviado ✅”).
-- [x] Ensure button gives feedback (disable during submit).
-- [ ] Run build/dev check (optional) and verify UI behavior.
-
+- [ ] Fix image path for the hero/profile photo by importing the asset from `src/imports` instead of using a root-relative `/src/imports/...` path.
+- [ ] Update `src/app/components/sections/HeroSection.tsx` to use the imported image URL.
+- [ ] Quick sanity check: confirm no TypeScript/Vite path issues and that the fallback no longer triggers.
 
