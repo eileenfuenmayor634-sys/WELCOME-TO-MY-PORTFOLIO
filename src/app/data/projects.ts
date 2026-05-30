@@ -27,10 +27,10 @@ export const projects: Project[] = [
     url: 'https://ecommerce-topaz-omega.vercel.app/'
   },
   {
-    title: 'News Aggregator',
-    description: 'Real-time news platform with category filtering',
-    tech: ['Next.js', 'API', 'Redux'],
-    image: '',
-    url: '#'
+    title: 'Sistema de Gestion Financiera con Agente',
+    description: 'Plataforma de gestión financiera personal que utiliza agentes inteligentes para el análisis y monitoreo de datos en tiempo real.',
+    tech: ['Next.js', 'Supabase', 'IA Agents', 'Tailwind CSS'],
+    image: 'src/imports/.jpeg',
+    url: 'https://gestion-financiera-app-omega.vercel.app/'
   }
 ];
