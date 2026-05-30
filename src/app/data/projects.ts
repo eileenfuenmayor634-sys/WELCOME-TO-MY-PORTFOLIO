@@ -1,5 +1,6 @@
 import mkDigitalImg from '../../imports/mk-digital.png';
 import ecommerceImg from '../../imports/ecommerce.png';
+import financeAgentImg from '../../imports/WhatsApp Image 2026-05-30 at 2.47.06 PM.jpeg';
 
 export interface Project {
   title: string;
@@ -30,7 +31,8 @@ export const projects: Project[] = [
     title: 'Sistema de Gestion Financiera con Agente',
     description: 'Plataforma de gestión financiera personal que utiliza agentes inteligentes para el análisis y monitoreo de datos en tiempo real.',
     tech: ['Next.js', 'Supabase', 'IA Agents', 'Tailwind CSS'],
-    image: 'src/imports/.jpeg',
+    image: financeAgentImg,
     url: 'https://gestion-financiera-app-omega.vercel.app/'
   }
 ];
+

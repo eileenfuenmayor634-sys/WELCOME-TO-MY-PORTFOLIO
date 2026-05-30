@@ -1,5 +1,7 @@
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import profileImg from '../../../imports/Gemini_Generated_Image_gp9uh4gp9uh4gp9u (1).png';
+import { Sparkle } from '../ui/Sparkle';
+
 
 export function HeroSection() {
 
@@ -12,7 +14,7 @@ export function HeroSection() {
             <div className="pt-0 -mt-12 pb-0">
               <p className="text-sm text-gray-600 mb-2">Full Stack Web Developer</p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 leading-tight">
-                Building the modern web.
+                Building the web.
               </h1>
               <p className="text-gray-600 text-base mb-5 max-w-lg leading-relaxed">
                 Transforming complex ideas into robust digital products.
@@ -22,7 +24,7 @@ export function HeroSection() {
                   Get Started
                 </a>
                 <a href="#projects" className="border-2 border-gray-900 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-50 transition-colors">
-                  See Our Work
+                  See my Work
                 </a>
               </div>
             </div>
@@ -33,26 +35,17 @@ export function HeroSection() {
 <div className="translate-y-[-52px]">
 {/* Decorative SVG sparkles */}
                 <div className="absolute -top-4 -right-4 w-20 h-20 z-50">
-                  <svg viewBox="0 0 100 100" className="w-full h-full" style={{color: '#FFD93D'}}>
-                    {/* Large 4-point sparkle */}
-                    <path d="M50 0 L55 35 L90 40 L55 50 L50 100 L45 50 L10 40 L45 35 Z" 
-                          fill="#FFD93D"/>
-                  </svg>
+                  <Sparkle className="w-full h-full" color="#FFD93D" opacity={1} />
                 </div>
                 {/* Small sparkle 1 */}
                 <div className="absolute top-8 right-24 w-10 h-10 z-40">
-                  <svg viewBox="0 0 100 100" className="w-full h-full" style={{color: '#FFD93D'}}>
-                    <path d="M50 0 L55 35 L90 40 L55 50 L50 100 L45 50 L10 40 L45 35 Z" 
-                          fill="#FFD93D" opacity="0.8"/>
-                  </svg>
+                  <Sparkle className="w-full h-full" color="#FFD93D" opacity={0.8} />
                 </div>
                 {/* Small sparkle 2 */}
                 <div className="absolute bottom-32 right-4 w-8 h-8 z-40">
-                  <svg viewBox="0 0 100 100" className="w-full h-full" style={{color: '#FFD93D'}}>
-                    <path d="M50 0 L55 35 L90 40 L55 50 L50 100 L45 50 L10 40 L45 35 Z" 
-                          fill="#FFD93D" opacity="0.6"/>
-                  </svg>
+                  <Sparkle className="w-full h-full" color="#FFD93D" opacity={0.6} />
                 </div>
+
 
                 {/* Profile image with circular frame */}
                 <div className="relative w-[300px] h-[300px] bg-black rounded-full overflow-hidden border-8 border-white shadow-2xl">
